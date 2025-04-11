@@ -171,7 +171,8 @@ class ClusteredYamapViewManager internal constructor() : ViewGroupManager<Cluste
 
     @ReactProp(name = "clusteredMarkers")
     fun setClusteredMarkers(view: View, points: ReadableArray) {
-        castToYaMapView(view).setClusteredMarkers(points.toArrayList()!!.filterNotNull())
+        castToYaMapView(view)
+            .setClusteredMarkers(ArrayList(points.toArrayList()!!.filterNotNull()))
     }
 
     @ReactProp(name = "clusterColor")

@@ -236,9 +236,9 @@ class YamapViewManager internal constructor() : ViewGroupManager<YamapView>() {
             val vehicles = ArrayList<String>()
 
             if (jsVehicles != null) {
-                val vehicle = ""
+                var vehicle = ""
                 for (i in 0 until jsVehicles.size()) {
-                    vehicle = jsVehicles!!.getString(i)
+                    vehicle = jsVehicles!!.getString(i)!!
                     if (vehicle != null) {
                         vehicles.add(vehicle)
                     }
